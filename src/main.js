@@ -11,5 +11,5 @@ app.whenReady().then(()=>{
         
     });
     mainWindow.removeMenu()
-    mainWindow.loadURL(path.join(__dirname,'index.html'))
+    mainWindow.loadURL(path.join(__dirname,"main",'index.html'))
 });

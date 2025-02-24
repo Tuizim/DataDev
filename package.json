@@ -1,17 +1,19 @@
 {
   "name": "electron",
   "version": "1.0.0",
-  "main": "src/main/index.js",
+  "main": "src/main.js",
   "scripts": {
-    "dev": "electron ."
+    "dev": "electron . webpack -w"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "electron": "^34.2.0"
+    "electron": "^34.2.0",
+    "ts-loader": "^9.5.2"
   },
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "webpack-cli": "^6.0.1"
   }
 }
