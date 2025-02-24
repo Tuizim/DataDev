@@ -1,0 +1,42 @@
+* {
+    font-size: 18px;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.gradient {
+    background: rgb(166, 142, 240);
+    background: linear-gradient(90deg, rgba(166, 142, 240, 1) 0%, rgba(40, 193, 232, 1) 100%);
+}
+
+.bg-gradient-color {
+    background: rgb(166, 142, 240);
+    background: linear-gradient(90deg, rgba(167, 142, 240, 0.2) 0%, rgba(40, 193, 232, 0.2) 100%);
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #7640eb 0%, #4456eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.align-center {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.align-center svg {
+vertical-align: middle;
+}
+
+.form-select option::target-text{
+    background-color: red;
+}
+.btn-close:focus,
+.btn-close:active {
+    box-shadow:none;
+}
+
+.svg-title{
+    width: 24px;
+    height: 24px;
+    fill:#7640eb;
+}

@@ -1,0 +1,21 @@
+# Ignorar node_modules
+node_modules/
+
+# Ignorar logs e arquivos temporários
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.DS_Store
+
+# Ignorar arquivos do Electron
+dist/
+out/
+electron-packager/
+electron-builder/
+cache/
+tmp/
+
+# Ignorar arquivos do sistema
+Thumbs.db
+*.swp

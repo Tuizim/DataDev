@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Teste</title>
+    <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="align-content-center bg-gradient-color p-3">
+    <div class="container-fluid bg-light w-75 rounded shadow p-0 position-relative">
+        <header
+            class="container-fluid bg-secondary h-25 rounded-top text-center align-content-center bg-gradient-color">
+            <h1 class="fw-bold gradient-text">Gerador de Dados para Testes</h1>
+            <h2 class="fw-light fs-5">Selecione um país para gerar dados de teste específicos</h2>
+        </header>
+        <div class="container-fluid p-5">
+            <div class="container mb-5">
+                <label for="country" class="align-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#7640eb"
+                        class="bi bi-globe-americas" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z" />
+                    </svg>
+                    <h3 class="fs-4 fw-normal m-0">País</h3>
+                </label>
+                <div class="dropdown w-100" id="country-dropdown">
+                    <button
+                        class="bg-light p-2 rounded border-1 border border-opacity-25 w-100 d-flex justify-content-between align-items-center"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span id="dropdownMenuButton">Selecione um país</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                        </svg>
+                    </button>
+                    <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#" data-value="1">Brasil</a></li>
+                        <li><a class="dropdown-item" href="#" data-value="2">Estados Unidos</a></li>
+                        <li><a class="dropdown-item" href="#" data-value="3">Portugal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="titles" class="container mb-5 p-0"></div>
+        </div>
+        <div id="alert" class="w-50 position-absolute bottom-0 end-0 m-2"></div>
+    </div>
+
+</body>
+
+<template id="title-template">
+    <div class="container mb-5">
+        <div class="container-fluid p-0 d-flex justify-content-between align-items-center mb-4">
+            <label class="d-flex align-center">
+                <div class="svg-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#7640eb"
+                        class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+                        <path
+                            d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5" />
+                        <path
+                            d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+                    </svg>
+                </div>
+                <h3 class="fs-4 fw-normal m-0 name-title">Documentos</h3>
+            </label>
+            <button class="btn btn-light border border-opacity-25" id="update-info">
+                Gerar
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                    class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                    <path
+                        d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9" />
+                    <path fill-rule="evenodd"
+                        d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5 5 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z" />
+                </svg>
+            </button>
+        </div>
+        <div id="data-create"></div>
+    </div>
+</template>
+<template id="data-tamplate">
+    <div class="bg-light border border-opacity-25 p-1 d-flex rounded justify-content-between align-items-center mb-1">
+        <div>
+            <span class="fs-6 m-1 text-primary name-data">RG:</span><span class="fs-6 m-0 info-data">1231239</span>
+        </div>
+        <button class="btn btn-light p-2 copy" id="copy-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+            </svg>
+        </button>
+    </div>
+</template>
+
+<script src="js/templates.js"></script>
+<script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</html>
