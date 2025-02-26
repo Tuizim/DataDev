@@ -1,4 +1,4 @@
-import "../../../assets/bootstrap/bootstrap.bundle.min.js";
+import "../../../../assets/bootstrap/bootstrap.bundle.min.js";
 
 document.querySelectorAll('#country-dropdown .dropdown-item').forEach(item => {
     item.addEventListener('click', function(e) {

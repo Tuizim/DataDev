@@ -1,4 +1,4 @@
-import "../../../assets/js/IMask.js";
+import "../../../../assets/js/IMask.js";
 
 const maskCPF = {
     mask: '000.000.000-00'

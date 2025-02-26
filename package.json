@@ -1,7 +1,7 @@
 {
   "name": "electron",
   "version": "1.0.0",
-  "main": "src/main.js",
+  "main": "src/core/main.js",
   "scripts": {
     "dev": "electron .",
     "rebuild": "electron-rebuild",
@@ -18,7 +18,9 @@
     "bootstrap": "^5.3.3",
     "clipboardy": "^4.0.0",
     "imask": "^7.6.1",
+    "jquery": "^3.7.1",
     "sqlite3": "^5.1.7",
+    "toastr": "^2.1.4",
     "webpack-cli": "^6.0.1"
   },
   "build": {

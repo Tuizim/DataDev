@@ -1,4 +1,4 @@
-import { dataClear, dataCreate, telClear, enderecoClear } from "../functions/templates.js";
+import { dataClear, dataCreate, telClear, enderecoClear } from "../functions/gerenciarTemplates.js";
 import { gerarCPF, gerarRG } from "../functions/gerarDocs.js"
 import { gerarTelefone } from "../functions/gerarTel.js";
 import { gerarEnderecoAleatorioBrasil } from "../functions/gerarEndereco.js";
