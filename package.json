@@ -4,7 +4,8 @@
   "main": "src/main.js",
   "scripts": {
     "dev": "electron .",
-    "rebuild": "electron-rebuild"
+    "rebuild": "electron-rebuild",
+    "build": "electron-builder ."
   },
   "author": "",
   "license": "ISC",
@@ -15,8 +16,17 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "clipboardy": "^4.0.0",
     "imask": "^7.6.1",
     "sqlite3": "^5.1.7",
     "webpack-cli": "^6.0.1"
+  },
+  "build": {
+    "appId": "com.keygo.id",
+    "productName": "keygo",
+    "win": {
+      "target": "msi",
+      "icon": "src/assets/icons/icon.ico"
+    }
   }
 }

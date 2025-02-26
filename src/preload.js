@@ -1,4 +1,4 @@
-const { contextBridge } = require('electron');
+const { contextBridge, clipboard} = require('electron');
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 
@@ -10,7 +10,7 @@ const db = new sqlite3.Database(path.join(__dirname, 'assets', 'db', 'enderecos.
   }
 });
 
-contextBridge.exposeInMainWorld('database', {
+contextBridge.exposeInMainWorld('api', {
   gerarEndereco: () => new Promise((resolve, reject) => {
     db.get("SELECT * FROM enderecos ORDER BY RANDOM() LIMIT 1", (err, row) => {
       if (err) {
@@ -20,4 +20,5 @@ contextBridge.exposeInMainWorld('database', {
       }
     });
   }),
+  copyText: (text) => clipboard.writeText(text)
 });

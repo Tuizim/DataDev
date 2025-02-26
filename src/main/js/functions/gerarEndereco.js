@@ -1,3 +1,3 @@
 export async function gerarEnderecoAleatorioBrasil() {
-    return await window.database.gerarEndereco();
+    return await window.api.gerarEndereco();
 }

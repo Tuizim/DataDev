@@ -26,6 +26,7 @@ export function dataCreate({name,info,fatherTitle}){
 
     const infoElement = clone.querySelector('.info-data')
     infoElement.textContent = info;
+    infoElement.id=infoElement.id+'-'+name
     
     const copy = clone.getElementById('copy-btn');
     copy.id= 'copy-btn-'+name;
