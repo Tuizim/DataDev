@@ -32,7 +32,4 @@ document.getElementById('update-info-Endereço').addEventListener('click', async
     dataCreate({ name: 'Estado:', info: estado, fatherTitle: 'Endereço' })
     dataCreate({ name: 'Rua:', info: rua, fatherTitle: 'Endereço' })
     dataCreate({ name: 'Cep:', info: maskCheck ? maskedCep.value : cep, fatherTitle: 'Endereço' })
-
-    let teste = window.api.getNames();
-    console.log(teste)
 })
