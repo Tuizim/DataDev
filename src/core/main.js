@@ -17,8 +17,10 @@ app.whenReady().then(() => {
             contextIsolation: true,
             enableRemoteModule: false,
             nodeIntegration: false,
+            devTools:false
           }
     });
+    mainWindow.maximize()
     mainWindow.menuBarVisible = false;
     mainWindow.loadURL(path.join(__dirname,'..', "renderer",'index', 'index.html'));
 });
