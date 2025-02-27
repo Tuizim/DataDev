@@ -1,0 +1,21 @@
+/* Personaliza a largura da scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Define o fundo da scrollbar
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+Define a cor da barra de rolagem
+::-webkit-scrollbar-thumb {
+    background: #7640eb;
+    border-radius: 10px;
+}
+
+Ao passar o mouse, muda a cor
+::-webkit-scrollbar-thumb:hover {
+    background:#7640eb ;
+} */

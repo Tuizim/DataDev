@@ -1,3 +1,3 @@
 export async function gerarEnderecoAleatorioBrasil() {
-    return await window.api.gerarEndereco();
+    return await window.api.getRandomLocation();
 }
