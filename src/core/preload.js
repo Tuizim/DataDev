@@ -2,7 +2,12 @@ const { contextBridge, clipboard} = require('electron');
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 
-const db = new sqlite3.Database(path.join(__dirname,'..' ,'assets', 'db', 'enderecos.db'), (err) => {
+const isDev = process.env.NODE_ENV === 'development';
+const dbPath = isDev
+  ? path.join(__dirname, '..', 'assets', 'db', 'enderecos.db')
+  : path.join(process.resourcesPath,'app','src', 'assets', 'db', 'enderecos.db');
+
+const db = new sqlite3.Database(dbPath, (err) => {
   if (err) {
     console.error('Erro ao abrir o banco de dados:', err.message);
   } else {
