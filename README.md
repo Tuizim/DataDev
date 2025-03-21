@@ -26,8 +26,4 @@ npm install
 npm run dev
 ```
 
-## 📥 Download
-You can download the latest version from the following link:
-[Download DataDev](https://github.com/Tuizim/DataDev/raw/main/installer/DataDev%201.0.1.msi)  
-Or directly from the **installer** folder in the repository.
 
